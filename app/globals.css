@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+
+
+/* Define Saira font family with weights and variations */
+/* .saira-normal {
+    font-family: "Saira", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
   }
+  
+  .saira-bold {
+    font-family: "Saira", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+  } */
+  
+
+
+/* Define custom font classes for Saira with specific weights and variation */
+.saira-normal {
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.saira-medium {
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.saira-semibold {
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Semi-bold weight */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.saira-bold {
+  font-family: "Saira", serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }

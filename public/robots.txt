@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://anandamconstruction.com
+
+# Sitemaps
+Sitemap: https://anandamconstruction.com/sitemap.xml

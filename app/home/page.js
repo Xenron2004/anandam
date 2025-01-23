@@ -57,7 +57,7 @@ export default function HomeSection() {
     //     </div>
     //   </div>
     <section className="flex flex-col gap-[100px] items-center w-full justify-center ">
-      <div className="flex flex-col relative w-full gap-[100px] items-center justify-center bg-cover bg-[url('/assets/HeroImage.png')] object-fit  h-auto ">
+      <div className="flex flex-col relative w-full gap-[100px] items-center justify-center bg-cover bg-[url('/assets/HeroImage.webp')] object-fit  h-auto ">
         <div className="flex flex-col  items-center justify-center w-full h-auto">
           <Navbar />
           <div className="max-w-[1280px]  md:mt-12 w-11/12 flex  gap-6 leading-[25.5px] h-[800px] flex-col items-start justify-center">

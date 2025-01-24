@@ -58,13 +58,15 @@ export default function HomeSection() {
     //   </div>
     <section className="flex flex-col gap-[100px] items-center w-full justify-center ">
       <div className="flex flex-col relative w-full gap-[100px] items-center justify-center bg-cover bg-[url('/assets/HeroImage.webp')] object-fit  h-auto ">
+      <div className="absolute inset-0 bg-black opacity-15 z-0"></div>
         <div className="flex flex-col  items-center justify-center w-full h-auto">
           <Navbar />
           <div className="max-w-[1280px]  md:mt-12 w-11/12 flex  gap-6 leading-[25.5px] h-[800px] flex-col items-start justify-center">
             <div className="text-white font-saira font-bold max-w-[900px] tracking-[0%] w-full md:text-[52px] text-[36px] leading-[48px] md:leading-[80px] mt-9 relative text-start">
               {/* Animated Welcome Text with Shine inside */}
-              <span className="relative inline-block text-[32px] font-manrope font-semibold bg-clip-text text-[] animate-colorFlow">
+              <span className="relative inline-block text-[40px] md:text-[62px]  text-[#FFCC3B] font-saira font-bold ">
                 {/* Shine Effect inside text */}
+                Anandam Construction
               </span>
               <br />
               Building Strong Foundations for better tomorrow

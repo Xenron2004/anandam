@@ -3,7 +3,7 @@ import React from "react";
 import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
 const MapAndPhone = () => {
-  const phoneNumber = "+91 9102302829"; // Replace with your actual phone number
+  const phoneNumber = "+91 7762975577"; // Replace with your actual phone number
   const mapLink = "https://g.co/kgs/rNwpjQH"; // Replace with your Google Maps link
 
   const handlePhoneClick = () => {

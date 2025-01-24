@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import WhatsAppIcon from "@/components/WhatsappIcon";
 import MapAndPhone from "@/components/MapAndPhone";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,6 +109,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${saira.className} ${manrope.className} antialiased`}>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light" // You can change this to 'dark'
+      />
         <SmoothScroll>
           {children}
           <Footer />

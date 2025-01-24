@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Who from "../assets/whoImg.webp";
 import Counter from "../../../components/Counter";
+import Link from "next/link";
 
 const WhyUs = () => {
   return (
@@ -59,10 +60,12 @@ const WhyUs = () => {
             </div>
           </div>
           <div className="relative group w-full md:max-w-[180px]">
+            <Link href="#contact">
           <button className="mt-6 px-6 py-3 w-full bg-primary text-white shadow relative overflow-hidden">
             <span className="relative z-10">GET IN TOUCH</span>
             <span className="absolute inset-0 bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
           </button>
+          </Link>
         </div>
         </div>
       </div>

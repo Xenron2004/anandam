@@ -3,56 +3,95 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Manone from "../../../public/assets/manone.png"
+import Mantwo from "../../../public/assets/mantwo.png"
+import Manthree from "../../../public/assets/manthree.png"
+import Manfour from "../../../public/assets/manfour.png"
+import Manfive from "../../../public/assets/manfive.png"
+import Womanone from "../../../public/assets/womanone.png"
+import Womantwo from "../../../public/assets/womantwo.png"
+import Womanthree from "../../../public/assets/womanthree.png"
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Rajesh Kumar",
     role: "Interior Designer",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&q=80",
+    Manone,
+
     content:
-      "The category boasts of some great products that exemplify innovation, far advanced and with better features than the ones sold in the market. There are multiple colours available within the same price range, and do not demand any premium being paid as compared to UPVC. A special mention about Tostem India, for being agile during installation and delivering high-quality service throughout.",
+      "Anandam Construction ka kaam bilkul top-notch hai! Unhone mere dream home ko reality banaya, aur quality kaafi impressive thi. Patna mein aisi construction company dhoondhna mushkil hai jo trust aur professionalism dono maintain kare!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Priya Verma",
     role: "Property Developer",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&q=80",
+      Womanone,
     content:
-      "Outstanding service from start to finish. The project was completed ahead of schedule and the results were spectacular.",
+      "Affordable rates aur premium quality – Anandam Construction ka kaam dekh kar sab log impress ho gaye! Har step pe transparency thi, aur unka team har detail ka dhyan rakhta hai. Highly recommend karta hoon!",
     rating: 5,
   },
   {
     id: 3,
-    name: "Emma Davis",
-    role: "Homeowner",
+    name: "Anil Singh",
+    role: "Anil Singh",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&q=80",
+      Mantwo,
     content:
-      "Their innovative approach to design and commitment to sustainability made them the perfect choice for our eco-friendly home project.",
+      "Mujhe apne ghar ke liye ek reliable builder chahiye tha, aur Anandam Construction ne meri umeedon se zyada deliver kiya. Unka design aur execution dono flawless tha. Thank you for making my dream home possible!",
     rating: 5,
   },
   {
     id: 4,
-    name: "David Wilson",
+    name: "Neha Jha",
     role: "Architect",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&q=80",
+     Womantwo,
     content:
-      "The category boasts of some great products that exemplify innovation, far advanced and with better features than the ones sold in the market. There are multiple colours available within the same price range, and do not demand any premium being paid as compared to UPVC. A special mention about Tostem India, for being agile during installation and delivering high-quality service throughout.",
+      "Jo bhi Anandam Construction ke saath kaam karega, unhe kabhi disappoint nahi hoga. Unki commitment aur quality work dekh kar aisa lagta hai ki aapka investment safe hands mein hai. Best construction company in Patna!",
     rating: 5,
   },
   {
     id: 5,
-    name: "Lisa Martinez",
+    name: "Vikash Sharma",
     role: "Commercial Client",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&q=80",
+     Manfour,
     content:
-      "Their team's ability to handle complex commercial projects while maintaining exceptional quality is remarkable.",
+      "Mere naye ghar ka design aur finishing Anandam Construction ke wajah se itna acha hai ki sab log tareef karte hain. Yeh team aapke sapno ko samajh kar unka pura khayal rakhti hai!",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Renu Devi",
+    role: "Commercial Client",
+    image:
+     Womanthree,
+    content:
+      "Mere naye ghar ka design aur finishing Anandam Construction ke wajah se itna acha hai ki sab log tareef karte hain. Yeh team aapke sapno ko samajh kar unka pura khayal rakhti hai!",
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: "Rohit Kumar",
+    role: "Commercial Client",
+    image:
+      Manfive,
+    content:
+      "Mere naye ghar ka design aur finishing Anandam Construction ke wajah se itna acha hai ki sab log tareef karte hain. Yeh team aapke sapno ko samajh kar unka pura khayal rakhti hai!",
+    rating: 5,
+  },
+  {
+    id: 8,
+    name: "Alok Tiwari",
+    role: "Commercial Client",
+    image:
+      Manthree,
+    content:
+      "Mere naye ghar ka design aur finishing Anandam Construction ke wajah se itna acha hai ki sab log tareef karte hain. Yeh team aapke sapno ko samajh kar unka pura khayal rakhti hai!",
     rating: 5,
   },
 ];
@@ -73,7 +112,7 @@ const Reviews = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(timer);
   }, []);
@@ -122,32 +161,32 @@ const Reviews = () => {
                         {testimonial.content}
                       </p>
                       <div className="flex items-center justify-center gap-[18px] ">
-                      <div className="relative w-[50px] h-[50px] mb-4">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="rounded-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="text-[#6C6F84] text-[16px] font-montserrat font-medium mb-1">
-                          {testimonial.name}
-                        </h3>
-
-                        <div className="flex gap-1 mb-4">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <svg
-                              key={i}
-                              className="w-5 h-5 text-yellow-400"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
+                        <div className="relative w-[50px] h-[50px] mb-4">
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            fill
+                            className="rounded-full object-cover"
+                          />
                         </div>
-                      </div>
+                        <div>
+                          <h3 className="text-[#6C6F84] text-[16px] font-montserrat font-medium mb-1">
+                            {testimonial.name}
+                          </h3>
+
+                          <div className="flex gap-1 mb-4">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <svg
+                                key={i}
+                                className="w-5 h-5 text-yellow-400"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                       {/* <p className="text-[16px] text-[#212B36] font-montserrat font-normal text-center">{testimonial.content}</p> */}
                     </div>
@@ -170,17 +209,16 @@ const Reviews = () => {
             ))}
           </div>
           <div className="items-center mt-5 justify-center flex">
-            <Link href='/testimonials'>
-            <div className="relative group w-full md:max-w-[180px]">
-          <button className="mt-6 px-6 py-3 w-full bg-primary text-white shadow relative overflow-hidden">
-            <span className="relative z-10">View All</span>
-            <span className="absolute inset-0 bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-          </button>
-        </div>
-          </Link>
+            <Link href="/testimonials">
+              <div className="relative group w-full md:max-w-[180px]">
+                <button className="mt-6 px-6 py-3 w-full bg-primary text-white shadow relative overflow-hidden">
+                  <span className="relative z-10">View All</span>
+                  <span className="absolute inset-0 bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
-         
       </div>
     </section>
   );

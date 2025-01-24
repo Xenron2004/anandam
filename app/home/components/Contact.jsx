@@ -21,7 +21,7 @@ const contactCardData = [
     icon: <MdEmail size={20} color="#E3AF45" />, // Example icon
     heading: "Email Us",
     bodyText: "Connect with us easily through email communication",
-    links: [{ text: "anandamconstruction12@gmail.com", url: "team@nxtzengroup.com" }],
+    links: [{ text: "anandamconstruction12@gmail.com", url: "mailto:anandamconstruction12@gmail.com" }],
     iconBgColor: "",
   },
   {
